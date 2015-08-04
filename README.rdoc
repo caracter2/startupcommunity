@@ -6,6 +6,10 @@ This is a change I made in Github.
 
 This is a change I made on the add_new_button_branch (I also fixed a spelling error in the previous line).
 
+Show me a merge conflict - LOCAL
+
+HELLO
+
 == README
 
 This README would normally document whatever steps are necessary to get the

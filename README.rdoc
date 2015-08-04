@@ -6,9 +6,13 @@ This is a change I made in Github.
 
 This is a change I made on the add_new_button_branch (I also fixed a spelling error in the previous line).
 
+
 Show me a merge conflict - LOCAL
 
 HELLO
+
+This is a Merge Conflict on the GITHUB SIDE
+
 
 == README
 
@@ -38,3 +42,6 @@ Things you may want to cover:
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
+
+
+Hi, this is Gerry.

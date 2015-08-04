@@ -4,7 +4,7 @@
     <div class= "panel panel-default">
       <div class= "panel-body">
         <h3><%= @profile.name %></h3>
-        <p><%= cl_image_tag(@profile.profile_pic_url, :zoom=>0.7, :crop=>:crop, :gravity=>:face, :transformation => 'face center') %></p>
+        <p><%= cl_image_tag(@profile.profile_pic_url, :width => 200, :height => 200, :crop => :thumb, :gravity => :face) %></p>
         <p>
           <strong>About me:</strong>
           <%= @profile.bio %>

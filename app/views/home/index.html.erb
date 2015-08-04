@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+<h1>Welcome to Startup Community</h1>
+<p></p>
+
+<% if user_signed_in?%>
+	<% unless current_user.profile %>
+		<%= link_to 'Create your profile', new_profile_path, class: 'btn btn-primary' %>
+	<% end %>
+	<%= link_to 'Add your event', new_event_path, class: 'btn btn-warning' %>
+	<%= link_to 'Add your startup', new_startup_path, class: 'btn btn-success' %>
+<% else %>
+	<%= link_to 'Create your profile', new_profile_path, class: 'btn btn-primary' %>
+<% end %>
+
+<hr>
+<h3>New Users:</h3>
+<div class ="row">
+  	<div class= "col-sm-4">
+		<%= render @new_profiles %>
+	</div>
+</div>
+<h3>Upcoming Events:</h3>
+ <div class= "col-sm-4">
+	<%= render @upcoming_events %>
+</div>

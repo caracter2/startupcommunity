@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+<div class ="row">
+  <div class= "col-sm-4">
+    <div class= "panel panel-default">
+      <div class= "panel-body">
+        <h3><%= @profile.name %></h3>
+        <p><%= cl_image_tag(@profile.profile_pic_url, :zoom=>0.7, :crop=>:crop, :gravity=>:face, :transformation => 'face center') %></p>
+        <p>
+          <strong>About me:</strong>
+          <%= @profile.bio %>
+        </p>
+        <p>
+          <strong>Location:</strong>
+          <%= @profile.city %>, <%= @profile.country %>
+        </p>
+        <hr>
+        <p><a href="https://twitter.com/<%= @profile.twitter %>" target="_blank"><i class ="fa fa-twitter"></i> <%= @profile.twitter %></a></p>
+        <p><%= link_to '<i class ="fa fa-linkedin"></i> Linkedin'.html_safe, @profile.linkedin %></p>
+        <p><i class ="fa fa-globe"></i><%= @profile.website %></p>
+        <% if @profile == current_user.profile %>
+          <%= link_to 'Edit', edit_profile_path(@profile), class: 'btn btn-warning btn-sm' %>
+        <% end %>
+      </div>
+    </div>
+
+    
+
+  </div>
+</div>
+<h3><%= @profile.name %> is in these startups: </h3>
+<div class ="row">
+      <div class= "col-sm-4">
+        <%= render @startups %>
+    </div>
+</div>
+<hr>
+<%= link_to 'Back', profiles_path %>

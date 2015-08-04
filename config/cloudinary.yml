@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: dt3qfoje8
+  api_key: '349442448243251'
+  api_secret: GIcnrNW-7lIjza-6yiHtONAn7Ro
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: dt3qfoje8
+  api_key: '349442448243251'
+  api_secret: GIcnrNW-7lIjza-6yiHtONAn7Ro
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: dt3qfoje8
+  api_key: '349442448243251'
+  api_secret: GIcnrNW-7lIjza-6yiHtONAn7Ro
+  enhance_image_tag: true
+  static_image_support: false

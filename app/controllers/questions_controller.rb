@@ -2,13 +2,19 @@ class QuestionsController < ApplicationController
   before_action :set_question, only: [:upvote, :downvote, :show, :edit, :update, :destroy]
   skip_before_action :authenticate_user!, only: [:index, :show]
 
-  def upvote
-    @question.liked_by current_user
+ def upvote
+    unless current_user.voted_for? @question
+      @question.liked_by current_user
+      @question.user.profile.increment(:reputation_points, by = 1)
+    end
     redirect_to :back
   end
 
   def downvote
-    @question.unliked_by current_user
+    if current_user.voted_for? @question
+      @question.unliked_by current_user
+      @question.user.profile.decrement(:reputation_points, by = 1)
+    end
     redirect_to :back
   end
 
